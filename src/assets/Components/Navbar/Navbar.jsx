@@ -23,6 +23,10 @@ const Navbar = () => {
                 </div>
                 <Link to='/' className="btn btn-ghost text-2xl font-bold text-[#23BE0A]">BookVibe</Link>
             </div>
+
+
+
+            
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 flex gap-6 text-[131313CC] text-lg font-normal ">
                         <NavLink to='/' className='btn bg-white border-none rounded-lg'>Home</NavLink>
