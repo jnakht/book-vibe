@@ -25,11 +25,11 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 flex gap-6 text-[131313CC] text-lg font-normal ">
-                        <NavLink className='btn bg-white border-none'>Home</NavLink>
-                        <NavLink className='btn bg-white border-none'>Listed Books</NavLink>
-                        <NavLink className='btn bg-white border-none'>Pages to Read</NavLink>
-                        <NavLink className='btn bg-white border-none'>Blogs</NavLink>
-                        <NavLink className='btn bg-white border-none'>About Us</NavLink>
+                        <NavLink className='btn bg-white border-none rounded-lg'>Home</NavLink>
+                        <NavLink className='btn bg-white border-none rounded-lg'>Listed Books</NavLink>
+                        <NavLink className='btn bg-white border-none rounded-lg'>Pages to Read</NavLink>
+                        <NavLink className='btn bg-white border-none rounded-lg'>Blogs</NavLink>
+                        <NavLink className='btn bg-white border-none rounded-lg'>About Us</NavLink>
                 </ul>
             </div>
             <div className="navbar-end  gap-6 hidden md:flex">
