@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import './Navbar.css'
 
 const Navbar = () => {
     return (
@@ -12,24 +12,24 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <NavLink>Home</NavLink>
-                        <NavLink>Listed Books</NavLink>
-                        <NavLink>Pages to Read</NavLink>
-                        <NavLink>Blogs</NavLink>
-                        <NavLink>About Us</NavLink>
-                        <NavLink>Sign In</NavLink>
-                        <NavLink>Sign Up</NavLink>
+                        <NavLink to='/'>Home</NavLink>
+                        <NavLink to='listedBooks'>Listed Books</NavLink>
+                        <NavLink to='pagesToRead'>Pages to Read</NavLink>
+                        <NavLink to='blogs'>Blogs</NavLink>
+                        <NavLink to='aboutUs'>About Us</NavLink>
+                        <NavLink to='signIn'>Sign In</NavLink>
+                        <NavLink to='signUp'>Sign Up</NavLink>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-[#131313] text-2xl font-bold">BookVibe</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 flex gap-6 text-[131313CC] text-lg font-normal ">
-                        <NavLink className='btn bg-white border-none rounded-lg'>Home</NavLink>
-                        <NavLink className='btn bg-white border-none rounded-lg'>Listed Books</NavLink>
-                        <NavLink className='btn bg-white border-none rounded-lg'>Pages to Read</NavLink>
-                        <NavLink className='btn bg-white border-none rounded-lg'>Blogs</NavLink>
-                        <NavLink className='btn bg-white border-none rounded-lg'>About Us</NavLink>
+                        <NavLink to='/' className='btn bg-white border-none rounded-lg'>Home</NavLink>
+                        <NavLink to='listedBooks' className='btn bg-white border-none rounded-lg'>Listed Books</NavLink>
+                        <NavLink to='pagesToRead' className='btn bg-white border-none rounded-lg'>Pages to Read</NavLink>
+                        <NavLink to='blogs' className='btn bg-white border-none rounded-lg'>Blogs</NavLink>
+                        <NavLink to='aboutUs' className='btn bg-white border-none rounded-lg'>About Us</NavLink>
                 </ul>
             </div>
             <div className="navbar-end  gap-6 hidden md:flex">
