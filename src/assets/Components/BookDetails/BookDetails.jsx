@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { BookContext } from "../Books/Books";
 import { useLoaderData, useParams } from "react-router-dom";
 import '../../../App.css'
+import toast, { Toaster } from 'react-hot-toast';
 
 const BookDetails = () => {
     const books = useLoaderData();
@@ -16,10 +17,16 @@ const BookDetails = () => {
         console.log('this is the book object: ', bookObj)
         console.log("this is the book: ", book)
     }, [books, id])
+    const handleReadButton = () => {
+        toast.success('Marked As Read')
+    }
+    const handleWishlistButton = () => {
+        toast.success('Added to Wishlist')
+    }
     // console.log("this is id go: ", id)
     // const {bookId, bookName, author, image, category, publisher, rating, tags, review, totalPages, yearOfPublishing} = book;
     return (
-        <div className="flex w-10/12 mx-auto mt-[24px]  mb-[100px]">
+        <div className="flex flex-col md:flex-row w-10/12 mx-auto mt-[24px]  mb-[100px]">
             <div className="w-[50%]  ">
                 <img className="h-[600px] " src={book?.image} alt="" />
             </div>
@@ -42,8 +49,8 @@ const BookDetails = () => {
                 <p className="text-[#131313CC] work-sans text-base font-normal mt-3">Year of Publishing: <span className="text-[#131313] work-sans text-base font-semibold">{book?.yearOfPublishing}</span></p>
                 <p className="text-[#131313CC] work-sans text-base font-normal mt-3">Rating: <span className="text-[#131313] work-sans text-base font-semibold">{book?.rating}</span></p>
                 <div className="mt-8">
-                    <button className="btn text-black mr-2">Read</button>
-                    <button className="btn bg-[#50B1C9] text-white">Wishlist</button>
+                    <button onClick={handleReadButton} className="btn text-black mr-2">Read</button>
+                    <button onClick={handleWishlistButton} className="btn bg-[#50B1C9] text-white">Wishlist</button>
                 </div>
             </div>
         </div>
