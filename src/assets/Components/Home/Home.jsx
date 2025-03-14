@@ -1,4 +1,5 @@
 import Banner from "../Banner/Banner";
+import Books from "../Books/Books";
 import TitleSection from "../TitleSection/TitleSection";
 
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div className="w-10/12 mx-auto">
             <Banner></Banner>
             <TitleSection></TitleSection>
+            <Books></Books>
         </div>
     );
 };
