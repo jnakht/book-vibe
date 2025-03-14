@@ -15,7 +15,7 @@ const Books = () => {
         <div>
             <BookContext.Provider value={books}>
                 {
-                    books.map(book => <Book></Book>)
+                    books.map(book => <Book book={book}></Book>)
                 }
             </BookContext.Provider>
         </div>
