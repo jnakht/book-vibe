@@ -12,7 +12,7 @@ const Books = () => {
     },[])
     console.log(books)
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-10 md:mb-14 lg:mb-[130px] space-x-3 space-y-8">
             <BookContext.Provider value={books}>
                 {
                     books.map(book => <Book book={book}></Book>)

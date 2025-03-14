@@ -5,7 +5,7 @@ import { FaRegStar } from "react-icons/fa";
 const Book = ({book}) => {
     const {bookName, author, image, category, publisher, rating, tags} = book;
     return (
-        <div className="mb-[130px]">
+        <div >
             <div className="card bg-base-100 md:w-96 h-[500px] shadow-sm hover:border-2 hover:border-[#23BE0A] transition hover:scale-105 grow">
                 <figure className="px-10 pt-10 rounded-2xl">
                     <img
