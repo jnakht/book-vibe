@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { BookContext } from "../Books/Books";
 import { useLoaderData, useParams } from "react-router-dom";
-
+import '../../../App.css'
 
 const BookDetails = () => {
     const books = useLoaderData();
@@ -19,26 +19,31 @@ const BookDetails = () => {
     // console.log("this is id go: ", id)
     // const {bookId, bookName, author, image, category, publisher, rating, tags, review, totalPages, yearOfPublishing} = book;
     return (
-        <div className="flex w-10/12 mx-auto">
-            <div className="w-[50%] h-[600px] ">
-                <img className="h-[600px] flex justify-center items-center" src={book?.image} alt="" />
+        <div className="flex w-10/12 mx-auto mt-[24px]  mb-[100px]">
+            <div className="w-[50%]  ">
+                <img className="h-[600px] " src={book?.image} alt="" />
             </div>
-            <div className="w-[50%] h-[600px]">
-                <h3>{book?.title}</h3>
-                <p>By: {book?.author}</p>
-                <p>{book?.category}</p>
-                <p>Review: {book?.review}</p>
-                <p>Tags</p>
-                {   
+            <div className="w-[50%]  pl-8">
+                <h3 className="text-black playfair-display text-[40px] font-extrabold mb-4">{book?.bookName}</h3>
+                <p className="text-[#131313CC] work-sans text-xl font-medium mb-6">By: {book?.author}</p>
+                <hr />
+                <p className="text-[#131313CC] work-sans text-xl font-medium my-4">{book?.category}</p>
+                <hr />
+                <p className="text-[#131313CC] work-sans text-base font-normal my-6"><span className="text-black font-bold">Review:</span> {book?.review}</p>
+                <div className="flex items-center gap-4 mb-6">
+                     <p className="text-black work-sans text-base font-bold">Tags</p>
+                    {   
                     book?.tags?.map(tag => <button className="bg-[#23BE0A0D] px-4 py-2 rounded-[30px] text-[#23BE0A] work-sans text-base font-medium ">{tag}</button>)
-                }
-                <p>Number of Pages: {book?.totalPages}</p>
-                <p>Publisher: {book?.publisher}</p>
-                <p>Year of Publishing: {book?.yearOfPublishing}</p>
-                <p>Rating: {book?.rating}</p>
-                <div>
-                    <button>Read</button>
-                    <button>Wishlist</button>
+                   }
+                </div>
+                <hr />
+                <p className="text-[#131313CC] work-sans text-base font-normal mt-6">Number of Pages: <span className="text-[#131313] work-sans text-base font-semibold">{book?.totalPages}</span></p>
+                <p className="text-[#131313CC] work-sans text-base font-normal mt-3">Publisher: <span className="text-[#131313] work-sans text-base font-semibold">{book?.publisher}</span></p>
+                <p className="text-[#131313CC] work-sans text-base font-normal mt-3">Year of Publishing: <span className="text-[#131313] work-sans text-base font-semibold">{book?.yearOfPublishing}</span></p>
+                <p className="text-[#131313CC] work-sans text-base font-normal mt-3">Rating: <span className="text-[#131313] work-sans text-base font-semibold">{book?.rating}</span></p>
+                <div className="mt-8">
+                    <button className="btn text-black mr-2">Read</button>
+                    <button className="btn bg-[#50B1C9] text-white">Wishlist</button>
                 </div>
             </div>
         </div>
