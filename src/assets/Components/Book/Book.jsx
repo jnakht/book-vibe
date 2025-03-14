@@ -5,9 +5,9 @@ import { FaRegStar } from "react-icons/fa";
 const Book = ({book}) => {
     const {bookName, author, image, category, publisher, rating, tags} = book;
     return (
-        <div>
-            <div className="card bg-base-100 w-96 shadow-sm">
-                <figure className="px-10 pt-10">
+        <div className="mb-[130px]">
+            <div className="card bg-base-100 md:w-96 h-[500px] shadow-sm hover:border-2 hover:border-[#23BE0A] transition hover:scale-105 grow">
+                <figure className="px-10 pt-10 rounded-2xl">
                     <img
                         src={image}
                         className="rounded-xl h-[182px] w-[303px]" />
@@ -18,10 +18,10 @@ const Book = ({book}) => {
                             tags.map(tag => <button className="bg-[#23BE0A0D] px-4 py-2 rounded-[30px] text-[#23BE0A] work-sans text-base font-medium ">{tag}</button>)
                         }
                     </div>
-                    <h2 className="card-title">{bookName}</h2>
-                    <p>By: {author}</p>
-                    <hr />
-                    <div className="card-actions">
+                    <h2 className="text-[#131313] playfair-display text-2xl font-bold">{bookName}</h2>
+                    <p className="text-[#131313CC] work-sans text-base font-medium">By: {author}</p>
+                    <hr className="border-dashed" />
+                    <div className="card-actions text-[#131313] work-sans text-base font-medium">
                         <p>{category}</p>
                         <div className="flex gap-1 justify-center items-center">
                             <p>{rating}</p>
