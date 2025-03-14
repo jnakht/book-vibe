@@ -2,10 +2,12 @@ import { useContext } from "react";
 import { BookContext } from "../Books/Books";
 import '../../../App.css'
 import { FaRegStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Book = ({book}) => {
-    const {bookName, author, image, category, publisher, rating, tags} = book;
+    const {bookId, bookName, author, image, category, publisher, rating, tags} = book;
+
     return (
-        <div >
+        <Link to={`/book/${bookId}`}>
             <div className="card bg-base-100 md:w-96 h-[500px] shadow-sm hover:border-2 hover:border-[#23BE0A] transition hover:scale-105 grow">
                 <figure className="px-10 pt-10 rounded-2xl">
                     <img
@@ -30,7 +32,7 @@ const Book = ({book}) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

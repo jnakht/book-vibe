@@ -9,6 +9,7 @@ import ListedBooks from "../Components/ListedBooks/ListedBooks";
 import PagesToRead from "../Components/PagesToRead/PagesToRead";
 import Blogs from "../Components/Blogs/Blogs";
 import AboutUs from "../Components/AboutUs/AboutUs";
+import BookDetails from "../Components/BookDetails/BookDetails";
 
 
 export const router = createBrowserRouter([
@@ -36,6 +37,11 @@ export const router = createBrowserRouter([
             {
                 path: 'aboutUs',
                 element: <AboutUs></AboutUs>
+            },
+            {
+                path: 'book/:id',
+                element: <BookDetails></BookDetails>,
+                loader: () => fetch('books.json')
             }
         ]
     }
