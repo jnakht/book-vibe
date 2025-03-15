@@ -10,8 +10,9 @@ import PagesToRead from "../Components/PagesToRead/PagesToRead";
 import Blogs from "../Components/Blogs/Blogs";
 import AboutUs from "../Components/AboutUs/AboutUs";
 import BookDetails from "../Components/BookDetails/BookDetails";
-import ReadBooksCard from "../Components/ReadBooksCard/ReadBooksCard";
+
 import Wishlist from "../Components/Wishlist/Wishlist";
+import ReadBooks from "../Components/ReadBooks/ReadBooks";
 
 
 export const router = createBrowserRouter([
@@ -30,7 +31,7 @@ export const router = createBrowserRouter([
                 children: [
                     {
                         index: true,
-                        element: <ReadBooksCard></ReadBooksCard>
+                        element: <ReadBooks></ReadBooks>
                     },
                     {
                         path: '/listedBooks/wishlist',
