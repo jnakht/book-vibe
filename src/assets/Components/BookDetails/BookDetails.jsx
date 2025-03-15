@@ -3,6 +3,7 @@ import { BookContext } from "../Books/Books";
 import { useLoaderData, useParams } from "react-router-dom";
 import '../../../App.css'
 import toast, { Toaster } from 'react-hot-toast';
+import { setToLocalStorage } from "../../../Utility/Utility";
 
 const BookDetails = () => {
     const books = useLoaderData();
@@ -18,10 +19,12 @@ const BookDetails = () => {
         console.log("this is the book: ", book)
     }, [books, id])
     const handleReadButton = () => {
-        toast.success('Marked As Read')
+        setToLocalStorage('read', book);
+        // toast.success('Marked As Read')
     }
     const handleWishlistButton = () => {
-        toast.success('Added to Wishlist')
+        setToLocalStorage('wishlist', book);
+        // toast.success('Added to Wishlist')
     }
     // console.log("this is id go: ", id)
     // const {bookId, bookName, author, image, category, publisher, rating, tags, review, totalPages, yearOfPublishing} = book;
