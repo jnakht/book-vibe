@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { BookContext } from "../Books/Books";
-import { useLoaderData, useParams } from "react-router-dom";
+import { redirect, useLoaderData, useParams } from "react-router-dom";
 import '../../../App.css'
 import toast, { Toaster } from 'react-hot-toast';
-import { setToLocalStorage } from "../../../Utility/Utility";
+import { getFromLocalStorage, setToLocalStorage } from "../../../Utility/Utility";
 
 const BookDetails = () => {
     const books = useLoaderData();
@@ -23,7 +23,20 @@ const BookDetails = () => {
         // toast.success('Marked As Read')
     }
     const handleWishlistButton = () => {
-        setToLocalStorage('wishlist', book);
+        const readList = getFromLocalStorage('read');
+        let alreadyRead = false;
+        readList.map(individualBook => {
+            if (individualBook.bookId === book.bookId) {
+                alreadyRead = true;
+            }
+        })
+        if (alreadyRead) {
+            toast.error("Can't add to Wishlist");
+        }
+        else {
+            setToLocalStorage('wishlist', book);
+        }
+        
         // toast.success('Added to Wishlist')
     }
     // console.log("this is id go: ", id)
