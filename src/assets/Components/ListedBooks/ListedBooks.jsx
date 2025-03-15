@@ -1,9 +1,10 @@
+import ListedBooksTitle from "../ListedBooksTitle/ListedBooksTitle";
 
 
 const ListedBooks = () => {
     return (
-        <div>
-            <h3>Thsi is listed books</h3>
+        <div className="w-10/12 mx-auto">
+            <ListedBooksTitle></ListedBooksTitle>
         </div>
     );
 };
