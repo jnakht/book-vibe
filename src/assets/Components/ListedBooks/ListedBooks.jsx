@@ -9,8 +9,8 @@ const ListedBooks = () => {
         <div className="w-10/12 mx-auto">
             <ListedBooksTitle></ListedBooksTitle>
             {/* dropdown menu start*/}
-            <div className=" border-2 border-yellow-600 mt-8 mb-[56px]">
-                <div className="dropdown dropdown-bottom dropdown-center border-2 border-green-600 flex justify-center">
+            <div className=" mt-8 mb-[56px]">
+                <div className="dropdown dropdown-bottom dropdown-center  flex justify-center">
                     <div tabIndex={0} role="button" className="btn m-1 w-[190px] bg-[#23BE0A] text-white work-sans text-lg font-semibold">Sort By<FaAngleDown /></div>
                     <ul tabIndex={0} className="dropdown-content menu bg-[#1313130D] rounded-box z-1 w-[190px] p-2 shadow-sm work-sans text-base font-normal">
                         <li><a>Rating</a></li>
@@ -22,7 +22,7 @@ const ListedBooks = () => {
             {/* dropdown menu end */}
 
             {/* card start */}
-            <div className="flex items-center  overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap border-2 border-green-500 dark:bg-gray-100 dark:text-gray-800 ">
+            <div className="flex items-center  overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap  dark:bg-gray-100 dark:text-gray-800 ">
                 <Link  onClick={() => setActiveCard(0)} className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2  dark:border-gray-600 dark:text-gray-600 ${activeCard === 0 ? 'border border-b-0 rounded-t-lg ' : 'border-b'}`}>
                    
                     <span>Read Books</span>
