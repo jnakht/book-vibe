@@ -13,6 +13,7 @@ import BookDetails from "../Components/BookDetails/BookDetails";
 
 import Wishlist from "../Components/Wishlist/Wishlist";
 import ReadBooks from "../Components/ReadBooks/ReadBooks";
+import RecentlyViewed from "../Components/RecentlyViewed/RecentlyViewed";
 
 
 export const router = createBrowserRouter([
@@ -44,8 +45,8 @@ export const router = createBrowserRouter([
                 element: <PagesToRead></PagesToRead>
             },
             {
-                path: 'blogs',
-                element: <Blogs></Blogs>
+                path: 'recentlyViewed',
+                element: <RecentlyViewed></RecentlyViewed>
             },
             {
                 path: 'aboutUs',

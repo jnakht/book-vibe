@@ -15,7 +15,7 @@ const Navbar = () => {
                         <NavLink to='/'>Home</NavLink>
                         <NavLink to='listedBooks'>Listed Books</NavLink>
                         <NavLink to='pagesToRead'>Pages to Read</NavLink>
-                        <NavLink to='blogs'>Blogs</NavLink>
+                        <NavLink to='blogs'>Recently Viewed</NavLink>
                         <NavLink to='aboutUs'>About Us</NavLink>
                         <NavLink to='signIn'>Sign In</NavLink>
                         <NavLink to='signUp'>Sign Up</NavLink>
@@ -32,7 +32,7 @@ const Navbar = () => {
                         <NavLink to='/' className='btn bg-white border-none rounded-lg'>Home</NavLink>
                         <NavLink to='listedBooks' className='btn bg-white border-none rounded-lg'>Listed Books</NavLink>
                         <NavLink to='pagesToRead' className='btn bg-white border-none rounded-lg'>Pages to Read</NavLink>
-                        <NavLink to='blogs' className='btn bg-white border-none rounded-lg'>Blogs</NavLink>
+                        <NavLink to='recentlyViewed' className='btn bg-white border-none rounded-lg'>Recently Viewed</NavLink>
                         <NavLink to='aboutUs' className='btn bg-white border-none rounded-lg'>About Us</NavLink>
                 </ul>
             </div>

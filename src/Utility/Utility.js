@@ -40,4 +40,4 @@ const store = (str, data) => {
     localStorage.setItem(str, JSON.stringify(data));
 }
 
-export {setToLocalStorage, getFromLocalStorage};
+export {setToLocalStorage, getFromLocalStorage, store};
