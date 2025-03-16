@@ -10,7 +10,7 @@ const ReadBooks = () => {
         setReadBooks(list);
     } ,[])
     return (
-        <div>
+        <div className="flex flex-col gap-6">
             {
                 readBooks.map(book => <ReadBooksCard book={book}></ReadBooksCard>)
             }
