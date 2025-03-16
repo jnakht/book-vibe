@@ -3,11 +3,12 @@ import { BookContext } from "../Books/Books";
 import '../../../App.css'
 import { FaRegStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { setToRecentlyViewed } from "../../../Utility/RecentlyViewed";
 
 const Book = ({book}) => {
     const {bookId, bookName, author, image, category, publisher, rating, tags} = book;
     const handleAddToRecent = () => {
-       
+       setToRecentlyViewed(book);
     }
     return (
         <Link onClick={handleAddToRecent} to={`/book/${bookId}`}>

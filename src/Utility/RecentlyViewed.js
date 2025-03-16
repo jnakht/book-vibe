@@ -2,7 +2,7 @@ import { getFromLocalStorage, store } from "./Utility"
 
 
 
-const setToRecentlyViewed = (book) => {
+export const setToRecentlyViewed = (book) => {
     const existing = getFromLocalStorage('recents');
     let isThere = false;
     const newExistingList = [];
@@ -17,9 +17,9 @@ const setToRecentlyViewed = (book) => {
     })
   
     
-    if (!isThere) {
+    
         newExistingList.push(book);
-    } 
+    
     store('recents', newExistingList);
 
 }
