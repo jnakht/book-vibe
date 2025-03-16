@@ -22,7 +22,7 @@ const ListedBooks = () => {
             {/* dropdown menu end */}
 
             {/* card start */}
-            <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800 ">
+            <div className="flex items-center  overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap border-2 border-green-500 dark:bg-gray-100 dark:text-gray-800 ">
                 <Link  onClick={() => setActiveCard(0)} className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2  dark:border-gray-600 dark:text-gray-600 ${activeCard === 0 ? 'border border-b-0 rounded-t-lg ' : 'border-b'}`}>
                    
                     <span>Read Books</span>
