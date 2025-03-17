@@ -28,7 +28,7 @@ const AboutUs = () => {
                                         <div className="flex items-center mt-4 space-x-4">
                                             <img src="https://i.ibb.co.com/nMhHDGpX/pexels-artempodrez-7956488.jpg" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
                                             <div>
-                                                <p className="text-lg font-semibold">Leroy Jenkins</p>
+                                                <p className="text-lg font-semibold">Tom Holland</p>
                                                 <p className="text-sm dark:text-gray-600">CTO of Company Co.</p>
                                             </div>
                                         </div>
@@ -40,7 +40,7 @@ const AboutUs = () => {
                                         <div className="flex items-center mt-4 space-x-4">
                                             <img src="https://i.ibb.co.com/B544tHbP/pexels-albarracin-30797307.jpg" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
                                             <div>
-                                                <p className="text-lg font-semibold">Leroy Jenkins</p>
+                                                <p className="text-lg font-semibold">Chris Jerico</p>
                                                 <p className="text-sm dark:text-gray-600">CTO of Company Co.</p>
                                             </div>
                                         </div>
@@ -50,7 +50,7 @@ const AboutUs = () => {
                                         <div className="flex items-center mt-4 space-x-4">
                                             <img src="https://i.ibb.co.com/5hstDJKQ/pexels-kampus-7233019.jpg" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
                                             <div>
-                                                <p className="text-lg font-semibold">Leroy Jenkins</p>
+                                                <p className="text-lg font-semibold">Simon Cowel</p>
                                                 <p className="text-sm dark:text-gray-600">CTO of Company Co.</p>
                                             </div>
                                         </div>
