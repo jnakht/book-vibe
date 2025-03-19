@@ -13,29 +13,18 @@ const ListedBooks = () => {
         <div className="w-10/12 mx-auto">
             <ListedBooksTitle></ListedBooksTitle>
             {/* select menu start */}
-            <div className=" mt-8 mb-[56px] border-2 border-red-500  flex  justify-center items-center">
-            <select defaultValue="Sort By" className="select  outline-none border-2 border-green-500  bg-[#23BE0A] text-white work-sans text-lg font-semibold         ">
+            <div className=" mt-8 mb-[56px]   flex  justify-center items-center border-none focus:outline-none focus:border-none text-center">
+            <select defaultValue="Sort By" className="select  outline-none   bg-[#23BE0A] text-white work-sans text-lg font-semibold focus:outline-none focus:border-none text-center">
                <div className="">
-               <option className="bg-gray-200"><button>Sort By<FaAngleDown /></button></option>
-                <option className="bg-gray-200"><button className="bg-gray-200" onClick={() => setSortBy('rating')}>Rating</button></option>
-                <option className="bg-gray-200"><button onClick={() => setSortBy('noOfPages')}>Number Of Pages</button></option>
-                <option className="bg-gray-200"><button onClick={() => setSortBy('publisherYear')}>Publisher Year</button></option>
+               <option className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal"><button>Sort By<FaAngleDown /></button></option>
+                <option className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal"><button className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal" onClick={() => setSortBy('rating')}>Rating</button></option>
+                <option className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal"><button onClick={() => setSortBy('noOfPages')}>Number Of Pages</button></option>
+                <option className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal"><button onClick={() => setSortBy('publisherYear')}>Publisher Year</button></option>
                </div>
             </select>
             </div>
             {/* select menu end */}
-            {/* dropdown menu start*/}
-            <div className=" mt-8 mb-[56px]">
-                <div className="dropdown dropdown-bottom dropdown-center  flex justify-center">
-                    <div tabIndex={0} role="button" className="btn m-1 w-[190px] bg-[#23BE0A] text-white work-sans text-lg font-semibold">Sort By<FaAngleDown /></div>
-                    <ul tabIndex={0} className="dropdown-content menu bg-[#1313130D] rounded-box z-1 w-[190px] p-2 shadow-sm work-sans text-base font-normal">
-                        <li><button onClick={() => setSortBy('rating')}>Rating</button></li>
-                        <li><button onClick={() => setSortBy('noOfPages')}>Number Of Pages</button></li>
-                        <li><button onClick={() => setSortBy('publisherYear')}>Publisher Year</button></li>
-                    </ul>
-                </div>
-            </div>
-            {/* dropdown menu end */}
+            
 
             {/* card start */}
             <div className="flex items-center  overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap  dark:bg-gray-100 dark:text-gray-800 ">
