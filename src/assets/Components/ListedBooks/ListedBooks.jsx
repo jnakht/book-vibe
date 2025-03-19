@@ -14,12 +14,12 @@ const ListedBooks = () => {
             <ListedBooksTitle></ListedBooksTitle>
             {/* select menu start */}
             <div className=" mt-8 mb-[56px] border-2 border-red-500  flex  justify-center items-center">
-            <select defaultValue="Sort By" className="select  outline-none border-2 border-green-500  bg-[#23BE0A] text-white work-sans text-lg font-semibold">
+            <select defaultValue="Sort By" className="select  outline-none border-2 border-green-500  bg-[#23BE0A] text-white work-sans text-lg font-semibold         ">
                <div className="">
-               <option className=" bg-white"><button>Sort By<FaAngleDown /></button></option>
-                <option className="bg-[#1313130D]"><button onClick={() => setSortBy('rating')}>Rating</button></option>
-                <option className="bg-[#1313130D]"><button onClick={() => setSortBy('noOfPages')}>Number Of Pages</button></option>
-                <option className="bg-[#1313130D]"><button onClick={() => setSortBy('publisherYear')}>Publisher Year</button></option>
+               <option className="bg-gray-200"><button>Sort By<FaAngleDown /></button></option>
+                <option className="bg-gray-200"><button className="bg-gray-200" onClick={() => setSortBy('rating')}>Rating</button></option>
+                <option className="bg-gray-200"><button onClick={() => setSortBy('noOfPages')}>Number Of Pages</button></option>
+                <option className="bg-gray-200"><button onClick={() => setSortBy('publisherYear')}>Publisher Year</button></option>
                </div>
             </select>
             </div>
