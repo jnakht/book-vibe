@@ -1,17 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getFromLocalStorage } from "../../../Utility/Utility";
 import ReadBooksCard from "../ReadBooksCard/ReadBooksCard";
+import { SortByTxtContext } from "../ListedBooks/ListedBooks";
 
 
 const ReadBooks = () => {
     const [readBooks, setReadBooks] = useState([]);
     // const sortBy = getFromLocalStorage('sortBy');
     
-    const [sortBy, setSortBy] = useState(getFromLocalStorage('sortBy') || 'default');
-    useEffect(() => {
-        const sortByTxt = getFromLocalStorage('sortBy') || 'default';
-        setSortBy(sortByTxt);
-    } ,[])
+    
+    const [sortBy, setSortBy] = useContext(SortByTxtContext);
     useEffect(() => {
         // const list = getFromLocalStorage('read');
         const list = JSON.parse(localStorage.getItem('read')) || [];

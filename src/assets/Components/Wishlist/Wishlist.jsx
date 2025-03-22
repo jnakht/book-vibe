@@ -13,7 +13,7 @@ const Wishlist = () => {
     //     setWishlist(list);
     // }, [])
     useEffect(() => {
-        console.log('sort by text using context api and in wishlist: ', sortBy);
+        // console.log('sort by text using context api and in wishlist: ', sortBy);
         
         const list = JSON.parse(localStorage.getItem('wishlist')) || [];
         
