@@ -7,7 +7,7 @@ const ReadBooksCard = ({book}) => {
     const {bookId, bookName, author, image, category, publisher, rating, tags, review, totalPages, yearOfPublishing} = book;
     return (
         <div>
-            <div className="card card-side bg-base-100 shadow-sm border border-solid border-[#13131326] h-[280px] p-2 md:p-6 flex flex-col md:flex-row">
+            <div className="card card-side bg-base-100 shadow-sm border border-solid border-[#13131326] h-full md:h-[280px] p-2 md:p-6 flex flex-col md:flex-row">
                 <figure className="w-full md:w-[30%] h-full md:h-[230px]  flex justify-center items-center rounded-lg">
                     <img
                         className="h-[200px] w-[90%] "
