@@ -15,8 +15,8 @@ const BookDetails = () => {
         setBook(bookObj);
         // console.log('book id using use Params: ', id);
         // console.log(" this is filtered book object: ",bookObj)
-        console.log('this is the book object: ', bookObj)
-        console.log("this is the book: ", book)
+       // console.log('this is the book object: ', bookObj)
+       // console.log("this is the book: ", book)
     }, [books, id])
     const handleReadButton = () => {
         setToLocalStorage('read', book);

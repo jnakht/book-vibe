@@ -2,7 +2,9 @@ import ListedBooksTitle from "../ListedBooksTitle/ListedBooksTitle";
 import { FaAngleDown } from "react-icons/fa";
 import '../../../App.css'
 import { Link, Outlet } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+
+export const SortByTxtContext = createContext('default');
 const ListedBooks = () => {
     const [activeCard, setActiveCard] = useState(0);
     const [sortBy, setSortBy] = useState('default');
@@ -42,8 +44,10 @@ const ListedBooks = () => {
                 </Link>
 
             </div>
-            {/* card end */}
-            <Outlet></Outlet>
+            <SortByTxtContext.Provider value={[sortBy, setSortBy]}>
+                {/* card end */}
+                <Outlet></Outlet>
+            </SortByTxtContext.Provider>
         </div>
     );
 };

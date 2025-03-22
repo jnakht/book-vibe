@@ -29,16 +29,16 @@ const PagesToRead = () => {
                 pages: book.totalPages
             }
             bookArr.push(eachBook);
-            console.log("this is eachBook Object: ", eachBook)
-            console.log("this is bookArr: ", bookArr)
+           // console.log("this is eachBook Object: ", eachBook)
+            //console.log("this is bookArr: ", bookArr)
         })
-        console.log('age hoise go')
-        console.log('this is bookArr After the map: ', bookArr)
+       // console.log('age hoise go')
+        //console.log('this is bookArr After the map: ', bookArr)
         setData(bookArr);
 
     }, [])
     useEffect(() => {
-        console.log('this is the data to make barChart: ', data);
+       // console.log('this is the data to make barChart: ', data);
     }, [data])
     return (
         <div className=" w-10/12 mx-auto bg-[#131313]/10 rounded-lg p-4 mt-4 mb-4">
