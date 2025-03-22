@@ -9,18 +9,22 @@ const ListedBooks = () => {
     useEffect(() => {
         localStorage.setItem('sortBy', JSON.stringify(sortBy));
     }, [sortBy])
+
+    const handleSortBy = (e) => {
+        setSortBy(e.target.value);
+    }
     return (
         <div className="w-10/12 mx-auto">
             <ListedBooksTitle></ListedBooksTitle>
             {/* select menu start */}
             <div className=" mt-8 mb-[56px]   flex  justify-center items-center border-none focus:outline-none focus:border-none text-center">
-            <select defaultValue="Sort By" className="select  outline-none   bg-[#23BE0A] text-white work-sans text-lg font-semibold focus:outline-none focus:border-none text-center">
-               <div className="">
-               <option className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal"><button>Sort By<FaAngleDown /></button></option>
-                <option className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal"><button className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal" onClick={() => setSortBy('rating')}>Rating</button></option>
-                <option className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal"><button onClick={() => setSortBy('noOfPages')}>Number Of Pages</button></option>
-                <option className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal"><button onClick={() => setSortBy('publisherYear')}>Publisher Year</button></option>
-               </div>
+            <select onChange={handleSortBy} defaultValue="Sort By" className="select  outline-none   bg-[#23BE0A] text-white work-sans text-lg font-semibold focus:outline-none focus:border-none text-center">
+               
+               <option value='default'  className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal">Sort By</option>
+                <option value='rating'   className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal">Rating</option>
+                <option value='noOfPages' className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal">Number Of Pages</option>
+                <option value='publisherYear' className="bg-gray-200 text-[#131313CC] work-sans text-base font-normal">Publisher Year</option>
+               
             </select>
             </div>
             {/* select menu end */}
