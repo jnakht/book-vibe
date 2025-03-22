@@ -3,6 +3,7 @@ import { FaAngleDown } from "react-icons/fa";
 import '../../../App.css'
 import { Link, Outlet } from "react-router-dom";
 import { createContext, useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 export const SortByTxtContext = createContext('default');
 const ListedBooks = () => {
@@ -17,6 +18,9 @@ const ListedBooks = () => {
     }
     return (
         <div className="w-10/12 mx-auto">
+            <Helmet>
+                <title>BookVibe - Listed Books</title>
+            </Helmet>
             <ListedBooksTitle></ListedBooksTitle>
             {/* select menu start */}
             <div className=" mt-8 mb-[56px]   flex  justify-center items-center border-none focus:outline-none focus:border-none text-center">

@@ -1,8 +1,13 @@
+import { Helmet } from "react-helmet-async";
 
 
 const AboutUs = () => {
     return (
+        
         <div className="w-10/12 mx-auto mt-5 mb-15 ">
+            <Helmet>
+            <title>BookVibe - About Us</title>
+        </Helmet>
             <section className="dark:bg-gray-100 dark:text-gray-800 rounded-xl">
                 <div className="container px-6 py-12 mx-auto">
                     <div className="grid items-center gap-4 xl:grid-cols-5">

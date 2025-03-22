@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getFromLocalStorage } from "../../../Utility/Utility";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { Helmet } from "react-helmet-async";
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
 const PagesToRead = () => {
@@ -42,7 +43,9 @@ const PagesToRead = () => {
     }, [data])
     return (
         <div className=" w-10/12 mx-auto bg-[#131313]/10 rounded-lg p-4 mt-4 mb-4">
-            
+            <Helmet>
+                <title>BookVibe - Pages To Read</title>
+            </Helmet>
             <ResponsiveContainer width='100%' height={600} >
             <BarChart
                 
