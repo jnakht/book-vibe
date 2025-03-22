@@ -14,12 +14,14 @@ import BookDetails from "../Components/BookDetails/BookDetails";
 import Wishlist from "../Components/Wishlist/Wishlist";
 import ReadBooks from "../Components/ReadBooks/ReadBooks";
 import RecentlyViewed from "../Components/RecentlyViewed/RecentlyViewed";
+import ErrorPage from "../Components/ErrorPage/ErrorPage";
 
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
