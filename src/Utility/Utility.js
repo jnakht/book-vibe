@@ -40,4 +40,16 @@ const store = (str, data) => {
     localStorage.setItem(str, JSON.stringify(data));
 }
 
-export {setToLocalStorage, getFromLocalStorage, store};
+
+const deleteFromWishlistIfExist = (book) => {
+    const existingWishlist = getFromLocalStorage('wishlist');
+    const newWishlist = [];
+    existingWishlist.map(singleBook => {
+        if (singleBook.bookId !== book.bookId) {
+            newWishlist.push(singleBook);
+        }
+    })
+    store('wishlist', newWishlist);
+}
+
+export {setToLocalStorage, getFromLocalStorage, store, deleteFromWishlistIfExist};

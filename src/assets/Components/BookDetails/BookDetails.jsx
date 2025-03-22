@@ -3,13 +3,13 @@ import { BookContext } from "../Books/Books";
 import { redirect, useLoaderData, useParams } from "react-router-dom";
 import '../../../App.css'
 import toast, { Toaster } from 'react-hot-toast';
-import { getFromLocalStorage, setToLocalStorage } from "../../../Utility/Utility";
+import { deleteFromWishlistIfExist, getFromLocalStorage, setToLocalStorage } from "../../../Utility/Utility";
 
 const BookDetails = () => {
     const books = useLoaderData();
     const id = parseInt(useParams().id);
     const [book, setBook] = useState(null)
-    // console.log("these are the books: ", books)
+    console.log('test text')
     useEffect(() => {
         const bookObj = books.find(book => book.bookId === id);
         setBook(bookObj);
@@ -19,6 +19,9 @@ const BookDetails = () => {
        // console.log("this is the book: ", book)
     }, [books, id])
     const handleReadButton = () => {
+        // first if the book is in wishlist, then delete it from wishlist and add to read list
+        deleteFromWishlistIfExist(book);
+
         setToLocalStorage('read', book);
         // toast.success('Marked As Read')
     }
